@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet/less" href="./css/index.less">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+  <script src="./js/flexible.js"></script>
+  <script src="./js/echarts.min.js"></script>
+  <!-- <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.2/??flexible_css.js,flexible.js"></script> -->
+</head>
+<body>
+  <header>
+    <h1>数据可视化-ECharts</h1>
+    <div id="showTime"></div>
+  </header>
+  <section class="mainBox">
+    <div class="column">
+      <div class="panel bar">
+        <h2>柱形图-就业行业</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel line">
+        <h2>折线图-人员变化 (<a href="javascript:;">2020</a> <a href="javascript:;">2021</a>)</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel pie">
+        <h2>饼形图-年龄分布</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="no">
+        <div class="no-hd">
+          <ul>
+            <li>123456</li>
+            <li>987565</li>
+          </ul>
+        </div>
+        <div class="no-bd">
+          <ul>
+            <li>前端需求人数</li>
+            <li>市场供应人数</li>
+          </ul>
+        </div>
+      </div>
+      <div class="map">
+        <div class="map1"></div>
+        <div class="map2"></div>
+        <div class="map3"></div>
+        <div class="chart"></div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="panel bar2">
+        <h2>柱形图-技能掌握</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel line2">
+        <h2>柱形图-播放量</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+      <div class="panel pie2">
+        <h2>饼形图-地区分布</h2>
+        <div class="chart"></div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    setInterval(function(){   
+    var date=new Date();   
+    var year=date.getFullYear(); //获取当前年份   
+    var mon=date.getMonth()+1; //获取当前月份   
+    var da=date.getDate(); //获取当前日   
+    var day=date.getDay(); //获取当前星期几   
+    var h=date.getHours(); //获取小时   
+    var m=date.getMinutes(); //获取分钟   
+    var s=date.getSeconds(); //获取秒   
+    var d=document.getElementById('showTime');    
+    d.innerHTML=year+'年'+mon+'月'+da+'日'+' '+h+':'+m+':'+s;  },1000)
+  </script>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/yearData.js"></script>
+  <script src="./js/china.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
